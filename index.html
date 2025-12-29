@@ -76,12 +76,15 @@
       <h2>Contact Us</h2>
       <p>Delhi • Open for New & Budding Artists</p>
 
-      <form name="contact" method="POST" data-netlify="true" action="/#contact" class="contact-form">
+      <form action="https://formsubmit.co/musicalmorons007@gmail.com" method="POST" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="tel" name="phone" placeholder="Phone Number" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <input type="hidden" name="_subject" value="New Studio Enquiry – Gog's Music Studio">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <button type="submit" class="btn">Send Message</button>
       </form>
 

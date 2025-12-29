@@ -76,7 +76,7 @@
       <h2>Contact Us</h2>
       <p>Delhi • Open for New & Budding Artists</p>
 
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <form name="contact" method="POST" data-netlify="true" action="/#contact" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -89,11 +89,37 @@
     </div>
   </section>
 
+  <!-- Success Popup -->
+  <div id="successPopup" class="popup">
+    <div class="popup-content">
+      <h3>Thank You 🎶</h3>
+      <p>Your message has been sent successfully.<br>We’ll contact you shortly.</p>
+      <button onclick="closePopup()" class="btn">OK</button>
+    </div>
+  </div>
+
   <style>
     .contact-form{max-width:500px;margin:30px auto 0;display:flex;flex-direction:column;gap:15px}
     .contact-form input,.contact-form textarea{padding:14px;border-radius:12px;border:none;font-size:1rem}
     .contact-form textarea{resize:none}
+
+    .popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:9999}
+    .popup-content{background:#020617;padding:30px;border-radius:20px;text-align:center;max-width:320px}
+    .popup-content h3{margin-bottom:10px}
   </style>
+
+  <script>
+    const form = document.querySelector('form[name="contact"]');
+    form.addEventListener('submit', function () {
+      setTimeout(() => {
+        document.getElementById('successPopup').style.display = 'flex';
+      }, 500);
+    });
+
+    function closePopup() {
+      document.getElementById('successPopup').style.display = 'none';
+    }
+  </script>
 
   <!-- Footer -->
   <footer>

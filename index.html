@@ -75,9 +75,25 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p>Delhi • Open for New & Budding Artists</p>
+
+      <form name="contact" method="POST" data-netlify="true" class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
       <div class="phone">📞 +91 8802417007</div>
     </div>
   </section>
+
+  <style>
+    .contact-form{max-width:500px;margin:30px auto 0;display:flex;flex-direction:column;gap:15px}
+    .contact-form input,.contact-form textarea{padding:14px;border-radius:12px;border:none;font-size:1rem}
+    .contact-form textarea{resize:none}
+  </style>
 
   <!-- Footer -->
   <footer>
